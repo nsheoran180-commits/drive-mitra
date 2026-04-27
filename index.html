@@ -1,71 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DriveMitra</title>
-
-<style>
-body{
-font-family: Arial;
-background:#0b5ed7;
-margin:0;
-}
-
-.card{
-background:white;
-margin:20px;
-padding:20px;
-border-radius:12px;
-}
-
-input,select{
-width:100%;
-padding:12px;
-margin-top:10px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-button{
-background:#0b5ed7;
-color:white;
-border:none;
-padding:15px;
-width:100%;
-border-radius:8px;
-font-size:16px;
-margin-top:15px;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive Mitra - Book Your Ride</title>
+    <link rel="stylesheet" href="user.css">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </head>
-
 <body>
+    <div class="container">
+        <div class="logo">🚗 Drive Mitra</div>
+        <h1>Book Your Ride</h1>
+        
+        <div class="booking-card">
+            <div class="input-group">
+                <label>Your Name</label>
+                <input type="text" id="name" placeholder="Enter full name">
+            </div>
+            <div class="input-group">
+                <label>Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter mobile number">
+            </div>
+            <div class="input-group">
+                <label>Pickup Location</label>
+                <input type="text" id="pickup" placeholder="From where?">
+            </div>
+            <div class="input-group">
+                <label>Drop Location</label>
+                <input type="text" id="drop" placeholder="Where to?">
+            </div>
+            
+            <button id="book-btn" onclick="bookRide()">Book Now</button>
+            <p id="msg"></p>
+        </div>
+    </div>
 
-<div class="card">
-<h2>DriveMitra</h2>
-
-<input placeholder="Mobile Number">
-
-<select>
-<option>Destination State</option>
-<option>Haryana</option>
-<option>Punjab</option>
-<option>Delhi</option>
-<option>Rajasthan</option>
-</select>
-
-<select>
-<option>Vehicle Category</option>
-<option>Motor Cab (4-6)</option>
-<option>Maxi Cab (6-20)</option>
-<option>Bus</option>
-<option>Goods Vehicle</option>
-</select>
-
-<button>Submit Request</button>
-
-</div>
-
+    <script src="supabase.js"></script>
+    <script src="user.js"></script>
 </body>
 </html>
